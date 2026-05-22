@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: "Katelyn Wong" }}</title>
+  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+  <script defer src="{{ '/app.js' | relative_url }}"></script>
+</head>
+<body>
+  {{ content }}
+</body>
+</html>
