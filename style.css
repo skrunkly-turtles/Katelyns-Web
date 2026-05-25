@@ -8,6 +8,20 @@
       opacity: 0;
     }
   }
+
+  @keyframes hoverIsland {
+    from{
+      width: 90%;
+      height: auto;
+      opacity: 1;
+    }
+    to{
+      width: 100%;
+      height:auto;
+      filter: drop-shadow(0 0 12px #ffffff);
+      opacity: 1;
+    }
+  }
   
   body {
     background-color: #000000 !important;
@@ -57,81 +71,32 @@
   .console-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    margin-top: 20px;
+    margin-top: -520px;
+    margin-bottom: 400px;
   }
 
-  /* Island Interactive Cards */
-  .island-card {
-    background: #111827;
-    border: 1px solid #1f2937;
-    border-radius: 16px;
-    padding: 30px 20px;
-    text-align: center;
-    text-decoration: none !important;
-    color: #94a3b8 !important;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-   
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .islands {
+  opacity: 0;
+  width: 90%;
+  height: auto;
 
-    margin-top: -500px;
+  animation-name: textOut;
+  animation-direction: reverse;
+  animation-timeline:view();
+  animation-duration: 1s;
+  animation-delay: 5s;
+
+  transition: width 0.4s ease, filter 0.4s ease; 
   }
 
-  .island-card h3 {
-    color: #fff;
-    margin: 15px 0 10px 0;
-    font-size: 1.3rem;
+  .island-text{
+    font-size:0px;
+    text-align:center;
+    text-decoration:none;
+    color: #94a3b8;
   }
 
-  .island-card p {
-    font-size: 0.9rem;
-    line-height: 1.4;
-    flex-grow: 1;
-    margin-bottom: 15px;
-  }
-
-  /* Interactive Glow States mimicking specific Emotions */
-  .projects-island:hover {
-    border-color: #fde047;
-    box-shadow: 0 0 20px rgba(253, 224, 71, 0.2);
-    transform: translateY(-5px);
-  }
-  
-  .achievements-island:hover {
-    border-color: #3b82f6;
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
-    transform: translateY(-5px);
-  }
-
-  .sidequests-island:hover {
-    border-color: #a855f7;
-    box-shadow: 0 0 20px rgba(168, 85, 247, 0.2);
-    transform: translateY(-5px);
-  }
-
-  /* Memory Orb Icons */
-  .island-orb {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    margin-bottom: 5px;
-  }
-
-  .yellow-orb { background: #fde047; box-shadow: 0 0 12px #fde047; }
-  .blue-orb { background: #3b82f6; box-shadow: 0 0 12px #3b82f6; }
-  .purple-orb { background: #a855f7; box-shadow: 0 0 12px #a855f7; }
-
-  /* Status Badge */
-  .status-tag {
-    font-size: 0.75rem;
-    font-weight: bold;
-    color: #10b981;
-    background: rgba(16, 185, 129, 0.1);
-    padding: 4px 10px;
-    border-radius: 20px;
-    letter-spacing: 1px;
-  }
+  .islands.hovered {
+  width: 100%;
+  filter: drop-shadow(0 0 12px #ffffff);
+}
