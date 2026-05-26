@@ -1,0 +1,19 @@
+body {
+    background-color: #000000 !important;
+    color: #e2e8f0 !important;
+  }
+  
+  .site-title {
+    color: #fff !important;
+  }
+
+.container {
+    background-image: url('images/sky.jpg');
+    padding: 20px 0;
+    font-family: Georgia;
+  }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
