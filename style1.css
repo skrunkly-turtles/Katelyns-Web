@@ -17,3 +17,9 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
+
+.slider {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}

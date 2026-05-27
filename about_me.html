@@ -3,21 +3,13 @@ layout: page
 title: "Katelyn Wong"
 ---
 <link rel="stylesheet" href="/style1.css">
+<script src="/app.js" defer></script>
 <div class="container">
     <p>
-        Hey there, it's Katelyn! I'm...
+        Hey there, it's Katelyn! I am...
     </p>
-    <div class="grid">
-        <a href="_about_me\baker.html">
-            Someone who loves baking!
-        </a>
-        <a href="_about_me\writer.html">
-            A freelance writer of all genres :)
-        </a>
-        <a href="_about_me\programmer.html">
-            Primarily a programmer, coder,
-            <br>
-            and AI researcher
-        </a>
+    <div class="slider">
+        <input type="range" name="range" id="range" value="10" min="0" max="20" oninput="updateLabel(this.value)">
+        <output type="text" id="output" class="output"></output>
     </div>
 </div>
