@@ -33,7 +33,7 @@
   }
 
   .hq-container {
-    background-image: url('images/sky.jpg');
+    background-image: url('/images/sky.jpg');
     background-size: 110%;
     height: 600px;
     width: 100%;

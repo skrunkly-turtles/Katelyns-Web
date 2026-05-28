@@ -1,0 +1,59 @@
+body {
+    background-color: #000000 !important;
+    color: #e2e8f0 !important;
+  }
+  
+  .site-title {
+    color: #fff !important;
+  }
+
+.container {
+    margin-top: 150px;
+    text-align:center;
+    width: 100%;
+    padding: 20px 0;
+    font-family: Georgia;
+  }
+
+.container p {
+  font-weight:bolder;
+  margin-bottom: 50px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.slider {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.endings {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.thing {
+  width: 300px;
+}
+
+#output {
+  padding-top: 50px;
+}
+
+#home {
+  position: fixed;
+  top: 30px;
+  left: 50px;
+  color: white;
+  text-decoration: none;
+}
+
+#home:hover {
+  transform: translateY(-5px);
+  transform:scale(110%);
+}

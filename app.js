@@ -31,3 +31,30 @@ function updateLabel(value){
   const closest = keys.reduce((a, b) => Math.abs(b - value) < Math.abs(a - value) ? b : a);
   document.getElementById("output").value = labels[closest];
 }
+
+//This code is for the Achievements Page
+function award(id) {
+  document.getElementById("boxes").style.gridTemplateColumns = 'repeat(3, 1fr)';
+
+  document.querySelectorAll("#boxes div").forEach(el => {
+    el.style.order = '1';
+    el.classList.remove('awarded');
+    el.style.padding = '50px 20px';
+    el.style.gridColumn = 'span 1'
+    el.style.fontSize = '20px';
+  });
+
+  const awarded = document.getElementById(id);
+  awarded.style.order = '0';
+  awarded.style.gridColumn = 'span 3';
+  awarded.style.padding = '100px 50px';
+  awarded.style.fontSize = '32px';
+  awarded.classList.add('awarded');
+}
+
+const descriptions = {
+  1: "blah blah", 
+  2:"blah blah",
+  3:"blah blah",
+  4: "blah blah"
+}

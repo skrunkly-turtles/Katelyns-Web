@@ -1,0 +1,38 @@
+@keyframes boing {
+    from{
+        transform:rotateZ(5deg);
+    }
+    to{
+        transform:rotateZ(-5deg);
+    }
+}
+
+body {
+    background-color: #000000 !important;
+    color: #e2e8f0 !important;
+}
+
+#boxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+
+}
+
+#boxes div{
+    border: 2px solid purple;
+    margin: 40px;
+    font-size: 20px;
+    text-align: center;
+    padding: 50px 20px 50px 20px;
+    border-radius: 10px;
+    transition: padding 0.3s ease, font-size 0.3s ease;
+}
+
+#boxes div:hover:not(.awarded) {
+    animation-name: boing;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction:alternate;
+    animation-timing-function: linear;
+}
