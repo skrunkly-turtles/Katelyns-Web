@@ -6,13 +6,14 @@
 <title>projects</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
+<h1 class="name"><span class="typed">Katelyn Wong</span></h1>
 <div class="window nav-window">
   <div class="window-body">
     <nav class="pixel-nav">
       <a href="index.html">home</a>
-      <a href="about.html">about me</a>
+      <a href="about.html">experiences</a>
       <a href="achievements.html">achievements</a>
       <a href="projects.html" class="active">projects</a>
       <a href="contact.html">contact</a>
@@ -24,60 +25,133 @@
 <div class="window window--wide">
   <div class="titlebar">
     <div class="dots"><span></span><span></span></div>
-    <span>PROJECTS.EXE</span>
-    <span class="sprig">🌿</span>
+    <span></span>
+    <span class="sprig"></span>
   </div>
   <div class="window-body">
-    <h2 class="section-title">projects</h2>
+  <h2 class="section-title">projects</h2>
+
+  <div class="carousel">
     <div class="grid">
 
       <div class="card">
-        <div class="placeholder placeholder-img">[ project image ]</div>
-        <h3 style="margin-top:14px;">[ project name ]</h3>
-        <p>[ placeholder — one or two lines describing the project and your role. ]</p>
+        <div class="placeholder placeholder-img">
+          <video poster="https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/004/932/259/datas/original.png">
+        </div>
+        <h3 style="margin-top:14px;">Hack the 6ix - veriFIRE</h3>
+        <p>
+          An edge-AI verification layer designed to work alongside a working smoke
+          detector. It combines heterogeneous sensors as well as a live camera monitor
+          equipped with a specially trained visual classifier to distinguish the environment
+          into: [Fire, Combustable Smoke, Water Vapour, Normal]. 
+          Unlike regular smoke detectors, VeriFIRE takes in multiple contextual clues which allows
+          it to give a smarter and more accurate reading on the state of the environment.
+          <br>
+          Running on a Raspberry Pi with QNX OS as its real time operating system, VeriFIRE
+          is a plug-and-play model that can be easily detatched and used mobilely as well. 
+          Our specially trained, offline classifier was trained with real video footage, on
+          a Yolo Nano v8, a CNN image-based recognition model.
+        </p>
+        <br>
+        <br>
         <p style="margin-top:10px;">
-          <span class="tag">tool 1</span><span class="tag">tool 2</span>
+          <span class="tag">Raspberry Pi</span>
+          <span class="tag">HTML/CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Kaggle</span>
+          <span class="tag">QNX</span>
         </p>
       </div>
 
       <div class="card">
-        <div class="placeholder placeholder-img">[ project image ]</div>
-        <h3 style="margin-top:14px;">[ project name ]</h3>
-        <p>[ placeholder — one or two lines describing the project and your role. ]</p>
+        <div class="placeholder placeholder-img">
+          <video poster="images/flowstate.png">
+        </div>
+        <h3 style="margin-top:14px;">UofT Hacks 13 - FlowState</h3>
+        <p>
+          An agentic environment of AI models which could communicate with each other freely and
+          interconnectedly to pass information to one other. Users can input their behaviours and
+          preferences, which will further influence the weightings of the agents.
+          <br>
+          During the session,  FlowState continuously monitors the user's eyes, and screen, ensuring 
+          that the user is on-task and is on a page which is relevant to their work. Straying away from these 
+          two requirements for too long will cause Kevin to output a message of stern warning. 
+          <br>
+          After the session, FlowState will analyze the data. It takes in duration, the user's previously 
+          inputted environment, the user's own self-reflection on how well the user focused, as well as any 
+          time the retina-detection or screenshotting software caught the user off-task. It then adjusts 
+          Kevin's behaviours to better suit the needs and quirks of the user.
+        </p>
         <p style="margin-top:10px;">
-          <span class="tag">tool 1</span><span class="tag">tool 2</span>
+          <span class="tag">Python</span>
+          <span class="tag">Amplitude</span>
+          <span class="tag">Agentic AI</span>
+          <span class="tag">Gemini API</span>
         </p>
       </div>
 
       <div class="card">
-        <div class="placeholder placeholder-img">[ project image ]</div>
-        <h3 style="margin-top:14px;">[ project name ]</h3>
-        <p>[ placeholder — one or two lines describing the project and your role. ]</p>
-        <p style="margin-top:10px;">
-          <span class="tag">tool 1</span><span class="tag">tool 2</span>
+        <div class="placeholder placeholder-img">
+          <img width=450px height=auto src="images/research.jpg">
+        </div>
+        <h3 style="margin-top:14px;">Replication Study on VideoRAG Enhancing Long Video Understanding</h3>
+        <p>
+          
         </p>
-      </div>
-
-      <div class="card">
-        <div class="placeholder placeholder-img">[ project image ]</div>
-        <h3 style="margin-top:14px;">[ project name ]</h3>
-        <p>[ placeholder — one or two lines describing the project and your role. ]</p>
         <p style="margin-top:10px;">
           <span class="tag">tool 1</span><span class="tag">tool 2</span>
         </p>
       </div>
 
     </div>
+
+    <div class="carousel-nav">
+      <button class="carousel-btn" onclick="moveCarousel(-1)">← prev</button>
+      <span class="carousel-dots"></span>
+      <button class="carousel-btn" onclick="moveCarousel(1)">next →</button>
+    </div>
   </div>
+</div>
 </div>
 
 <footer>
     <div class="social">
         <a href="https://github.com/skrunkly-turtles"><img src="images/github.svg"></a>
-        <a href="https://www.linkedin.com/in/kwong13/"><img src="images/linkedin.jpg"></a>
+        <a href="https://www.linkedin.com/in/kwong13"><img src="images/linkedin.jpg"></a>
     </div>
     made with html, css, and lots of whimsy!
 </footer>
 
+
+<script>
+  let currentSlide = 0;
+  const track = document.querySelector('.carousel .grid');
+  const slides = document.querySelectorAll('.carousel .card');
+  const dotsContainer = document.querySelector('.carousel-dots');
+
+  slides.forEach((_, i) => {
+    const dot = document.createElement('span');
+    if (i === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => goToSlide(i));
+    dotsContainer.appendChild(dot);
+  });
+
+  function updateCarousel() {
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    document.querySelectorAll('.carousel-dots span').forEach((dot, i) => {
+      dot.classList.toggle('active', i === currentSlide);
+    });
+  }
+
+  function moveCarousel(direction) {
+    currentSlide = (currentSlide + direction + slides.length) % slides.length;
+    updateCarousel();
+  }
+
+  function goToSlide(index) {
+    currentSlide = index;
+    updateCarousel();
+  }
+</script>
 </body>
 </html>

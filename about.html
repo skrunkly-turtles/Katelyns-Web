@@ -7,12 +7,12 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<h1 class="name"><span class="typed">Katelyn Wong</span></h1>
 <div class="window nav-window">
   <div class="window-body">
     <nav class="pixel-nav">
       <a href="index.html">home</a>
-      <a href="about.html" class="active">about me</a>
+      <a href="about.html" class="active">experience</a>
       <a href="achievements.html">achievements</a>
       <a href="projects.html">projects</a>
       <a href="contact.html">contact</a>
@@ -21,71 +21,148 @@
   </div>
 </div>
 
-<div class="window">
-  <div class="titlebar">
-    <div class="dots"><span></span><span></span></div>
-    <span></span>
-    <span class="sprig"></span>
-  </div>
-  <div class="window-body">
-    <h2 class="section-title">about me</h2>
-    <p>I'm a student at the University of Toronto for Computer Science, and
-      an Economics Minor. I'm all for creative full stack development, 
-      physical AI, and multimodal RAG. 
-      <br>
-      In my spare time, I love long-distance running, writing short stories,
-      and trying out new food!
-    </p>
-  </div>
-</div>
+<button class="toggle-btn" onclick="document.querySelector('.window-container').classList.toggle('show-second')">
+  flip to see other types of experiences!
+</button>
 
-<div class="window">
-  <div class="titlebar">
-    <div class="dots"><span></span><span></span></div>
-    <span>SOFTWARE_LIST</span>
-    <span class="sprig"></span>
+<div class="window-container">
+  <div class="window">
+    <div class="titlebar">
+      <div class="dots"><span></span><span></span></div>
+      <span></span>
+      <span class="sprig"></span>
+    </div>
+    <div class="window-body">
+      <h2 class="section-title">tech experiences</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="card-header">
+            <h3>AI Research Intern</h3>
+            <h3 class="card-date">April 2026 - Present</h3>
+          </div>
+          <h5>SAVI Network UofT</h5>
+          <ul>
+            <li>Develop a novel and specialized AI agent framework to automate the distribution of information across a smart network
+                using Python, Ollama and SQLite.</li>
+            <li>Deploy multi-agent reinforcement learning to accurately analyze heterogeneous data, while optimizing latency and
+                computational power.</li>
+            <li>Conduct user test cases for the testbed, innovating the AI structure, and training the AI agents.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3>IEEE Logistics Associate</h3>
+            <h3 class="card-date">April 2026 - Present</h3>
+          </div>
+          <h5>IEEE University of Toronto</h5>
+          <ul>
+            <li>Plan, market, and coordinate hackathons, technical interview nights, and showcases for the entire UofT student body.</li>
+            <li>Support and represent the world’s largest engineering corporation at UofT to educate and empower students.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3>CSSU Researcher</h3>
+            <h3 class="card-date">October 2025 - March 2026</h3>
+          </div>
+          <h5>University of Toronto Computer Science</h5>
+          <ul>
+            <li>Researched a lightweight pipeline which optimized LVLM performances while maintaining cost-efficiency and
+                compatibility with all LLMs.</li>
+            <li>Replicated promising findings of utilizing auxiliary tools such as ASR, OCR, and Dino Detection Tool to augment the
+                ability of various LVLM models such as LLAVA-NEXT, GPT-4o, and Gemini-1.5-Pro</li>
+            <li>Publicly presented findings and process at the CSSU Research Fair for Engineering and Arts & Science faculties.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3>Competitive Coding Head</h3>
+            <h3 class="card-date">September 2024 - June 2025</h3>
+          </div>
+          <h5>St. Clements School</h5>
+          <ul>
+            <li>Trained and led a group of high school students to compete in competitive programming competitions</li>
+            <li>Founded St Clement's first team coding competition.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3>STEM Captain</h3>
+            <h3 class="card-date">Steptember 2024 - June 2025</h3>
+          </div>
+          <h5>St. Clements School</h5>
+          <ul>
+            <li>Oversaw all extracurricular STEM-related initiatives including robotics, science club, math club, junior STEM, and coding club.</li>
+            <li>Ran the annual STEM Fair for the student body.</li>
+            <li>Collaborated regularly with other student leaders to deliver activities, fundraisers, and events for the entire student body.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="window-body">
-    <h2 class="section-title">skills</h2>
-    <div class="bar-row">
-      <span>Placeholder Skill 1</span>
-      <div class="bar-track"><div class="bar-fill" style="width:85%"></div></div>
-    </div>
-    <div class="bar-row">
-      <span>Placeholder Skill 2</span>
-      <div class="bar-track"><div class="bar-fill" style="width:70%"></div></div>
-    </div>
-    <div class="bar-row">
-      <span>Placeholder Skill 3</span>
-      <div class="bar-track"><div class="bar-fill" style="width:60%"></div></div>
-    </div>
-    <div class="bar-row">
-      <span>Placeholder Skill 4</span>
-      <div class="bar-track"><div class="bar-fill" style="width:45%"></div></div>
-    </div>
-  </div>
-</div>
 
-<div class="window">
-  <div class="titlebar">
-    <div class="dots"><span></span><span></span></div>
-    <span>FUN_FACTS.TXT</span>
-    <span class="sprig">🍃</span>
-  </div>
-  <div class="window-body">
-    <h2 class="section-title">a few fun facts</h2>
-    <div class="grid">
-      <div class="card"><h3>fact one</h3><p>[ placeholder ]</p></div>
-      <div class="card"><h3>fact two</h3><p>[ placeholder ]</p></div>
-      <div class="card"><h3>fact three</h3><p>[ placeholder ]</p></div>
+  <div class="window">
+    <div class="titlebar">
+      <div class="dots"><span></span><span></span></div>
+      <span></span>
+      <span class="sprig"></span>
+    </div>
+    <div class="window-body">
+      <h2 class="section-title">leadership experiences</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="card-header">
+            <h3>IEEE Logistics Associate</h3>
+            <h3 class="card-date">April 2026 - Present</h3>
+          </div>
+          <h5>IEEE University of Toronto</h5>
+          <ul>
+            <li>Plan, market, and coordinate hackathons, technical interview nights, and showcases for the entire UofT student body.</li>
+            <li>Support and represent the world’s largest engineering corporation at UofT to educate and empower students.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3>Innis Residence House Representative</h3>
+            <h3 class="card-date">September 2025 - April 2026</h3>
+          </div>
+          <h5>Innis College</h5>
+          <ul>
+            <li>Represented residents at the Innis College to support them in their physical, mental, and social wellbeing</li>
+            <li>Collaborated with the Innis Residence Council to run weekly events for the Innis Residence.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3>Summer Camp Counsellor</h3>
+            <h3 class="card-date">June 2025 - August 2025</h3>
+          </div>
+          <h5>Toronto Cricket, Skating, and Curling Club</h5>
+          <ul>
+            <li>Directly oversaw and supervised groups of 5-15 children ages 4-12.</li>
+            <li>Effectively planned and lead activities such as group games, sports, and a camp-wide Olympics.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3>AGAPE Student Leader</h3>
+            <h3 class="card-date">September 2021 - June 2025</h3>
+          </div>
+          <h5>Richmond Hill Christian Community Church</h5>
+          <ul>
+            <li>Planned and ran weekly two-hour programs for 200+ high school students.</li>
+            <li>Organized small group nights, overnight retreats, outreach events, and guest speakers.</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
 <footer>
     <div class="social">
-        <a href="https://github.com/skrunkly-turtles"><img src="images/github.svg"></a>
-        <a href="https://www.linkedin.com/in/kwong13/"><img src="images/linkedin.jpg"></a>
+        <a href="https://github.com/skrunkly-turtles" target="_blank"><img src="images/github.svg"></a>
+        <a href="https://www.linkedin.com/in/kwong13" target="_blank"><img src="images/linkedin.jpg"></a>
     </div>
     made with html, css, and lots of whimsy!
 </footer>

@@ -5,14 +5,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:wght@400;700&display=swap');
 
 :root {
-  --sage-100: #eaf3f0;
-  --sage-200: #dbe9e4;
-  --sage-300: #b9d6cd;
-  --sage-400: #9cc4b8;
-  --ink: #22302b;
-  --ink-soft: #4c5c56;
+  --sage-100: #f1ecf7;
+  --sage-200: #e3d9f0;
+  --sage-300: #c9b3e0;
+  --sage-400: #a98fd2;
+  --ink: #2a2436;
+  --ink-soft: #5c5468;
   --paper: #ffffff;
-  --line: #22302b;
+  --line: #2a2436;
   --radius: 10px;
 }
 
@@ -30,6 +30,61 @@ body {
 }
 
 /* generic pixel-window panel, the signature element of the whole site */
+
+.window-container {
+  position: relative;
+}
+
+.window-container .window:nth-child(1),
+.window-container .window:nth-child(2) {
+  display: none;
+}
+
+.window-container .window:nth-child(1) {
+  display: block;
+}
+
+.window-container.show-second .window:nth-child(1) {
+  display: none;
+}
+
+.window-container.show-second .window:nth-child(2) {
+  display: block;
+}
+
+.toggle-btn {
+  font-family: inherit; /* assuming your site already uses a pixel/mono font like 'Press Start 2P' or similar */
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a2e2a;
+  background: #eef4f0;
+  border: 2px solid #1a2e2a;
+  border-radius: 8px;
+  padding: 8px 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 #1a2e2a;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  margin-left:500px;
+  padding-left:40px;
+  padding-right:40px;
+}
+
+.toggle-btn:hover {
+  background: #dbe8e1;
+}
+
+.toggle-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 #1a2e2a;
+}
+
+.toggle-btn::before {
+  font-size: 1rem;
+}
+
 .window {
   background: var(--paper);
   border: 2px solid var(--line);
@@ -77,6 +132,42 @@ body {
 }
 
 /* ---------- top nav ---------- */
+.name {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size:60px;
+  padding-left:500px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  margin:0;
+  margin-top:5px;
+}
+
+.typed {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid var(--line, #1a2e2a); /* the "cursor" */
+  width: 0;
+  animation:
+    typing 2.5s steps(12, end) infinite,
+    blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  0% { width: 0; }
+  60% { width: 12ch; } /* "Katelyn Wong" = 12 characters */
+  90% { width: 12ch; } /* pause before restarting */
+  100% { width: 0; }
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: var(--line, #1a2e2a); }
+}
+
+
 .nav-window {
   max-width: 1040px;
 }
@@ -97,8 +188,8 @@ nav.pixel-nav a {
   color: var(--ink);
   font-family: 'Space Mono', monospace;
   font-weight: 700;
-  font-size: 13px;
-  padding: 7px 14px;
+  font-size: 15px;
+  padding: 5px 14px;
   border: 2px solid transparent;
   border-radius: 6px;
   letter-spacing: 0.5px;
@@ -158,10 +249,77 @@ h2.section-title {
   margin: 0 0 18px;
 }
 
+/* ---------- carosoul grid ---------- */
+/* ---------- carousel wrapper ---------- */
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel .grid {
+  display: flex;
+  transition: transform 0.4s ease;
+  gap: 0; /* cards are full-width slides now, no gap needed between them */
+}
+
+.carousel .card {
+  flex: 0 0 100%;
+  box-sizing: border-box;
+}
+
+.carousel-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.carousel-btn {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--ink);
+  background: var(--paper, #eef4f0);
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  padding: 6px 14px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 var(--line);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.carousel-btn:hover {
+  background: var(--sage-100);
+}
+
+.carousel-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 var(--line);
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.carousel-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid var(--line);
+  background: transparent;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.carousel-dots span.active {
+  background: var(--sage-400);
+}
+
 /* ---------- card grid ---------- */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: 1fr;;
   gap: 20px;
 }
 
@@ -178,11 +336,35 @@ h2.section-title {
   font-family: 'Space Mono', monospace;
   font-weight: 700;
 }
+.card h5{
+  margin: 0 0 8px;
+}
 
+.card li{
+  font-size: 13px;
+}
 .card p {
   margin: 0;
   color: var(--ink-soft);
   font-size: 14px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.card-header h3 {
+  margin: 0;
+}
+
+.card-date {
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: #5a6b64; /* muted so it doesn't compete with the title */
+  white-space: nowrap;
 }
 
 /* skill / progress bars, echoes the "installed programs" panel */
@@ -220,8 +402,9 @@ h2.section-title {
   padding: 34px 12px;
 }
 
-.placeholder-img {
+.placeholder-img video{
   width: 100%;
+  height: 100%;
   aspect-ratio: 16 / 10;
 }
 
@@ -262,7 +445,14 @@ h2.section-title {
   color: var(--ink-soft);
   min-width: 90px;
 }
-
+.contact-list a{
+  text-decoration: none;
+  color:inherit;
+}
+.contact-list a:hover{
+  text-decoration: none;
+  color:#a98fd2;
+}
 /* ---------- footer ---------- */
 footer {
   text-align: center;

@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>janhvi.exe — achievements</title>
+<title>achievements</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<h1 class="name"><span class="typed">Katelyn Wong</span></h1>
 <div class="window nav-window">
   <div class="window-body">
     <nav class="pixel-nav">
       <a href="index.html">home</a>
-      <a href="about.html">about me</a>
+      <a href="about.html">experiences</a>
       <a href="achievements.html" class="active">achievements</a>
       <a href="projects.html">projects</a>
       <a href="contact.html">contact</a>
@@ -21,56 +21,114 @@
   </div>
 </div>
 
-<div class="window">
-  <div class="titlebar">
-    <div class="dots"><span></span><span></span></div>
-    <span>ACHIEVEMENTS.EXE</span>
-    <span class="sprig"></span>
+<button class="toggle-btn" onclick="document.querySelector('.window-container').classList.toggle('show-second')">
+  flip to see other types of experiences!
+</button>
+<div class="window-container">
+  <div class="window">
+    <div class="titlebar">
+      <div class="dots"><span></span><span></span></div>
+      <span></span>
+      <span class="sprig"></span>
+    </div>
+    <div class="window-body">
+      <h2 class="section-title">technical achievements</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="card-header">
+            <h3>Dean's List Scholar</h3>
+            <h3 class="card-date">April 2026</h3>
+          </div>
+          <p>A Faculty of Arts & Science students with a cumulative GPA of 3.50 or higher</p>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3>STEM Scholarship</h3>
+            <h3 class="card-date">June 2025</h3>
+          </div>
+          <p>A $2000 scholarship awarded to the student with proficiency in all STEM fields.</p>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3>AP Scholar with Distinction</h3>
+            <h3 class="card-date">June 2025</h3>
+          </div>
+          <ul>
+            <li>AP English</li>
+            <li>AP Biology</li>
+            <li>AP Data Management</li>
+            <li>AP Calculus AB</li>
+            <li>AP Microeconomics</li>
+            <li>AP Physics 1</li>
+            <li>AP Computer Science AB</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3>Waterloo Math Contest Distinction</h3>
+            <h3 class="card-date">September 2021 - June 2025</h3>
+          </div>
+          <ul>
+            <li>Fryer 2022</li>
+            <li>Galois 2023</li>
+            <li>Hypatia 2024</li>
+            <li>CIMC 2021, 2022</li>
+            <li>CSMC 2023, 2024</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="window-body">
-    <h2 class="section-title">achievements</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>[ award / title ]</h3>
-        <p>[ placeholder — organization, year, one line on why it mattered. ]</p>
-      </div>
-      <div class="card">
-        <h3>[ award / title ]</h3>
-        <p>[ placeholder — organization, year, one line on why it mattered. ]</p>
-      </div>
-      <div class="card">
-        <h3>[ award / title ]</h3>
-        <p>[ placeholder — organization, year, one line on why it mattered. ]</p>
-      </div>
-      <div class="card">
-        <h3>[ award / title ]</h3>
-        <p>[ placeholder — organization, year, one line on why it mattered. ]</p>
+
+<div class="window">
+    <div class="titlebar">
+      <div class="dots"><span></span><span></span></div>
+      <span></span>
+      <span class="sprig"></span>
+    </div>
+    <div class="window-body">
+      <h2 class="section-title">other achievements</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="card-header">
+            <h3>Writer's Craft Award</h3>
+            <h3 class="card-date">June 2025</h3>
+          </div>
+          <p>Highest Proficiency in the Writer's Craft class in 2025</p>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3>INCITE Writing Contest Winner</h3>
+            <h3 class="card-date">November 2023, 2024</h3>
+          </div>
+          <p>[ placeholder — organization, year, one line on why it mattered. ]</p>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3>Duke of Edinburgh Gold Recipient</h3>
+            <h3 class="card-date">June 2025</h3>
+          </div>
+          <p>[ placeholder — organization, year, one line on why it mattered. ]</p>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3>RCM Level 10 Honours</h3>
+            <h3 class="card-date">June 2025</h3>
+          </div>
+          <p>[ placeholder — organization, year, one line on why it mattered. ]</p>
+        </div>
+        <div class="card">
+          <h3>[ award / title ]</h3>
+          <p>[ placeholder — organization, year, one line on why it mattered. ]</p>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
-<div class="window">
-  <div class="titlebar">
-    <div class="dots"><span></span><span></span></div>
-    <span>CERTIFICATIONS.TXT</span>
-    <span class="sprig"></span>
-  </div>
-  <div class="window-body">
-    <h2 class="section-title">certifications</h2>
-    <p>
-      <span class="tag">[ certification ]</span>
-      <span class="tag">[ certification ]</span>
-      <span class="tag">[ certification ]</span>
-      <span class="tag">[ certification ]</span>
-    </p>
-  </div>
-</div>
-
 <footer>
     <div class="social">
-        <a href="https://github.com/skrunkly-turtles"><img src="images/github.svg"></a>
-        <a href="https://www.linkedin.com/in/kwong13/"><img src="images/linkedin.jpg"></a>
+        <a href="https://github.com/skrunkly-turtles" target="_blank"><img src="images/github.svg"></a>
+        <a href="https://www.linkedin.com/in/kwong13" target="_blank"><img src="images/linkedin.jpg"></a>
     </div>
     made with html, css, and lots of whimsy!
 </footer>
