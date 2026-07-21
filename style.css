@@ -1,0 +1,280 @@
+/* ============================================
+   janhvi.exe — retro pixel-window portfolio
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --sage-100: #eaf3f0;
+  --sage-200: #dbe9e4;
+  --sage-300: #b9d6cd;
+  --sage-400: #9cc4b8;
+  --ink: #22302b;
+  --ink-soft: #4c5c56;
+  --paper: #ffffff;
+  --line: #22302b;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--sage-200);
+  color: var(--ink);
+  font-family: 'Space Mono', monospace;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* generic pixel-window panel, the signature element of the whole site */
+.window {
+  background: var(--paper);
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 5px 5px 0 var(--line);
+  margin: 28px auto;
+  max-width: 880px;
+  overflow: hidden;
+}
+
+.window--wide { max-width: 1040px; }
+
+.titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--sage-300);
+  border-bottom: 2px solid var(--line);
+  padding: 10px 16px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+.titlebar .dots {
+  display: flex;
+  gap: 6px;
+}
+
+.titlebar .dots span {
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--line);
+  border-radius: 50%;
+  display: inline-block;
+  background: var(--paper);
+}
+
+.titlebar .sprig {
+  font-size: 13px;
+}
+
+.window-body {
+  padding: 24px 35px;
+}
+
+/* ---------- top nav ---------- */
+.nav-window {
+  max-width: 1040px;
+}
+
+.nav-window .window-body {
+  padding: 0;
+}
+
+nav.pixel-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 14px 20px;
+}
+
+nav.pixel-nav a {
+  text-decoration: none;
+  color: var(--ink);
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 7px 14px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+}
+
+nav.pixel-nav a:hover {
+  border-color: var(--line);
+  background: var(--sage-100);
+}
+
+nav.pixel-nav a.active {
+  background: var(--sage-400);
+  border-color: var(--line);
+}
+
+/* ---------- hero ---------- */
+.hero {
+  background: var(--sage-100);
+  display: flex;
+  gap: 26px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.avatar-pixel img{
+  width: 170px;
+  height: 170px;
+  flex-shrink: 0;
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  background:
+    repeating-linear-gradient(135deg, var(--sage-300), var(--sage-300) 6px, var(--sage-200) 6px, var(--sage-200) 12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 22px;
+}
+
+.hero h1 {
+  margin: 0 0 6px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.hero p {
+  margin: 0;
+  color: var(--ink-soft);
+  max-width: 46ch;
+}
+
+/* ---------- headings ---------- */
+h2.section-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  margin: 0 0 18px;
+}
+
+/* ---------- card grid ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  background: var(--sage-100);
+  padding: 16px 18px;
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+}
+
+.card p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+
+/* skill / progress bars, echoes the "installed programs" panel */
+.bar-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 8px 0;
+  font-size: 13px;
+}
+
+.bar-track {
+  flex: 1;
+  height: 10px;
+  border: 2px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper);
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: var(--sage-400);
+}
+
+/* ---------- placeholder blocks ---------- */
+.placeholder {
+  border: 2px dashed var(--ink-soft);
+  border-radius: 8px;
+  background: var(--sage-100);
+  color: var(--ink-soft);
+  font-size: 13px;
+  text-align: center;
+  padding: 34px 12px;
+}
+
+.placeholder-img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+}
+
+/* ---------- tag pill ---------- */
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  border: 2px solid var(--line);
+  border-radius: 20px;
+  padding: 2px 10px;
+  margin: 2px 4px 2px 0;
+  background: var(--paper);
+}
+
+.social img{
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+/* ---------- contact list ---------- */
+.contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-list li {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--sage-400);
+  font-size: 14px;
+}
+
+.contact-list li:last-child { border-bottom: none; }
+
+.contact-list .label {
+  color: var(--ink-soft);
+  min-width: 90px;
+}
+
+/* ---------- footer ---------- */
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: var(--ink-soft);
+  padding: 30px 20px 50px;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 560px) {
+  .window { margin: 16px; }
+  .window-body { padding: 18px; }
+  .hero h1 { font-size: 16px; }
+  .titlebar { font-size: 9px; }
+}
