@@ -17,7 +17,6 @@
       <a href="achievements.html">achievements</a>
       <a href="projects.html" class="active">projects</a>
       <a href="contact.html">contact</a>
-      <a href="sidequests.html">sidequests</a>
     </nav>
   </div>
 </div>
@@ -53,6 +52,13 @@
           a Yolo Nano v8, a CNN image-based recognition model.
         </p>
         <br>
+        <h3>Links:</h3>
+        <p>
+          <a href="https://devpost.com/software/verifire-lo3jcu" target="_blank">Devpost</a>
+          <br>
+          <a href="https://github.com/pusheen5000000/veriFire" target="_blank">GitHub</a>
+          <br>
+        </p>
         <br>
         <p style="margin-top:10px;">
           <span class="tag">Raspberry Pi</span>
@@ -82,6 +88,13 @@
           time the retina-detection or screenshotting software caught the user off-task. It then adjusts 
           Kevin's behaviours to better suit the needs and quirks of the user.
         </p>
+        <h3>Links:</h3>
+        <p>
+          <a href="https://devpost.com/software/flowstate-9pzsbt" target="_blank">Devpost</a>
+          <br>
+          <a href="https://github.com/EdisonCai2007/UoftHacks13" target="_blank">GitHub</a>
+          <br>
+        </p>
         <p style="margin-top:10px;">
           <span class="tag">Python</span>
           <span class="tag">Amplitude</span>
@@ -92,14 +105,43 @@
 
       <div class="card">
         <div class="placeholder placeholder-img">
-          <img width=450px height=auto src="images/research.jpg">
+          <img width=400px height=auto src="images/research.jpg">
+          <img width=450px height=auto src="images/Katelyn Wong USRP Research Poster.jpg">
         </div>
-        <h3 style="margin-top:14px;">Replication Study on VideoRAG Enhancing Long Video Understanding</h3>
+        <h3 style="margin-top:14px;"><a href="https://drive.google.com/file/d/1mhN8MJb1kZNEK6XezDlretoUzUMq3Nar/view?usp=drive_link">Replication Study on VideoRAG Enhancing Long Video Understanding</a></h3>
         <p>
-          
+          Large Video Language Models are specially trained LLMs that input videos, rather than text, 
+          to answer text-based queries. Images are far more computationally costly, thus LVLMs are limited to 
+          smart-sampling frames, audio, and text-based clues.
+          <br>
+          I replicated and adapted the findings from VideoRAG by Luo et al in 2025, which proposed a plug-and-play 
+          enhancement pipeline to add overtop an existing LVLM to increase its accuracy without compromising computational 
+          lightweightedness and latency. 
+          <br>
+          Rather than randomly selecting frames to interpret, the pipeline used auxiliary tools such as ASR, OCR, and a visual
+          detection tool to create a 'bank' of relevant descriptive text, given the user's query. Combining inexpensive text reading 
+          with smart-sampling of image frames allowed the model to have a far more informed decision. 
+          <br>
+          Given the lightweight nature of the auxiliary tools, the computational costs were minimal, and my replication results
+          were promising and statistically significant.
         </p>
+        <br>
+        <h3>Links:</h3>
+        <p>
+          <a href="https://drive.google.com/file/d/1mhN8MJb1kZNEK6XezDlretoUzUMq3Nar/view?usp=drive_link" target="_blank">Research Poster</a>
+          <br>
+          <a href="https://arxiv.org/pdf/2411.13093" target="_blank">Original Paper</a>
+          <br>
+        </p>
+        <br>
+        <br>
         <p style="margin-top:10px;">
-          <span class="tag">tool 1</span><span class="tag">tool 2</span>
+          <span class="tag">Automatic Speech Recognition</span>
+          <span class="tag">Optical Character Recognition</span>
+          <span class="tag">Detection Tool</span>
+          <span class="tag">Large Video Language Models</span>
+          <span class="tag">Python</span>
+          <span class="tag">PyTorch</span>
         </p>
       </div>
 
@@ -115,6 +157,10 @@
 </div>
 
 <footer>
+    <div class="pond-wrapper">
+      <img class="pond" src="images/pond.png">
+      <a href="sidequests.html"><img class="turtleduck" src="images/turtleduck.png"></a>
+    </div>
     <div class="social">
         <a href="https://github.com/skrunkly-turtles"><img src="images/github.svg"></a>
         <a href="https://www.linkedin.com/in/kwong13"><img src="images/linkedin.jpg"></a>

@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --sage-100: #f1ecf7;
+  --sage-200: #e3d9f0;
+  --sage-300: #c9b3e0;
+  --sage-400: #a98fd2;
+  --ink: #2a2436;
+  --ink-soft: #5c5468;
+  --paper: #ffffff;
+  --line: #2a2436;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--sage-200);
+  color: var(--ink);
+  font-family: 'Space Mono', monospace;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: var(--ink);
+}
+
+/* footer */
+.social img{
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: var(--ink-soft);
+  padding: 30px 20px 50px;
+}
+
+/* temp text*/
+.load {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

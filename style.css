@@ -29,6 +29,55 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+a {
+  text-decoration: none;
+  color: var(--ink);
+}
+/* turtleduck haha */
+
+.pond-wrapper {
+  position: absolute;
+  right:150px;
+  width: 7%; /* size goes here now */
+  display: inline-block;
+}
+
+.pond {
+  display: block;
+  width: 100%; /* fills the wrapper */
+  height: auto;
+}
+
+.turtleduck {
+  width: 40%;
+  height: auto;
+  position: absolute;
+  top: 40%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  animation: swim 4s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes swim {
+  0% {
+    transform: translate(-50%, -50%) translateX(-7px);
+  }
+  49% {
+    transform: translate(-50%, -50%) translateX(7px);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateX(7px);
+  }
+  99% {
+    transform: translate(-50%, -50%) translateX(-7px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateX(-7px);
+  }
+}
+
+
 /* generic pixel-window panel, the signature element of the whole site */
 
 .window-container {
@@ -461,10 +510,81 @@ footer {
   padding: 30px 20px 50px;
 }
 
-/* ---------- responsive ---------- */
+/* ---------- hehe the portal! ---------- */
 @media (max-width: 560px) {
   .window { margin: 16px; }
   .window-body { padding: 18px; }
   .hero h1 { font-size: 16px; }
   .titlebar { font-size: 9px; }
+}
+
+.portal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 600px;
+  margin: 0 auto;
+}
+
+.portal {
+  align-self: flex-start; 
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  max-width: 100%; /* now animates toward a fixed target, not a moving one */
+  animation: typing 4s steps(40, end) forwards;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+
+.line {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 1.5s steps(40, end) forwards;
+}
+
+.line1 { animation-delay: 0s; }
+.line2 { animation-delay: 2s; }
+.line3 { animation-delay: 5s; }
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.fade-in-btn {
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards;
+  animation-delay: 8s; /* after all 3 lines finish typing */
+  font-family: inherit; /* assuming your site already uses a pixel/mono font like 'Press Start 2P' or similar */
+  font-size: 0.80rem;
+  font-weight: 500;
+  color: #1a2e2a;
+  background: #eef4f0;
+  border: 2px solid #1a2e2a;
+  border-radius: 8px;
+  padding: 5px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 #1a2e2a;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.fade-in-btn:hover {
+  background: #dbe8e1;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
