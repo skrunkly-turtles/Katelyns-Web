@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:wght@400;700&display=swap');
 
 :root {
-  --sage-100: #f1ecf7;
-  --sage-200: #e3d9f0;
-  --sage-300: #c9b3e0;
-  --sage-400: #a98fd2;
-  --ink: #2a2436;
-  --ink-soft: #5c5468;
+  --sage-100: #faf8f4;
+  --sage-200: #f0ece3;
+  --sage-300: #ddd6c9;
+  --sage-400: #b8afa0;
+  --ink: #2e2c28;
+  --ink-soft: #6b665c;
   --paper: #ffffff;
-  --line: #2a2436;
+  --line: #2e2c28;
   --radius: 10px;
 }
 
@@ -45,7 +45,41 @@ footer {
 
 /* temp text*/
 .load {
-    display:flex;
-    justify-content: center;
-    align-items: center;
+  font-weight:bold;
+  font-size: 20px;
+  padding-top:200px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxes {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.boxes span {
+  width: 20px;
+  border: 2px solid black;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.boxes span:hover {
+  animation-name: fade;
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade {
+  0% { box-shadow: 0 0 2px var(--ink-soft); }
+  60% { box-shadow: 0 0 4px var(--ink-soft); }
+  90% { box-shadow: 0 0 6px var(--ink); }
+  100% { box-shadow: 0 0 8px var(--ink); }
+}
+
+img {
+  width: 30px;
+  height:auto;
 }
