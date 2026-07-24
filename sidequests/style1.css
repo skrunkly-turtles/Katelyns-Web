@@ -137,3 +137,24 @@ footer {
   animation-duration: 0.25s;
   animation-fill-mode: forwards;
 }
+
+.cookies img {
+  width: 300px;
+  height: auto;
+  margin: 30px;
+  border-radius: 24px;
+  display: block;
+}
+
+.cookies {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.cookies img:hover {
+  box-shadow: 5px 5px 5px var(--ink-soft);
+  border: 5px solid var(--ink-soft);
+}
