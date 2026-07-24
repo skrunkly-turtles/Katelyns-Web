@@ -37,6 +37,11 @@ a {
   object-fit: contain;
 }
 footer {
+  position:absolute;
+  bottom:50px;
+  right:500px;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   font-size: 12px;
   color: var(--ink-soft);
@@ -45,6 +50,8 @@ footer {
 
 /* temp text*/
 .load {
+  position:relative;
+  bottom: 50px;
   font-weight:bold;
   font-size: 20px;
   padding-top:200px;
@@ -58,12 +65,37 @@ footer {
   justify-content: center;
   display: flex;
 }
+
 .boxes span {
   width: 20px;
+  height:20px;
   border: 2px solid black;
+  padding-top:0%;
   padding: 20px;
-  margin: 20px;
+  margin: 0px 20px 0px 20px;
   border-radius: 10px;
+  display:inline-block;
+  aspect-ratio: 1/1;
+}
+
+.stage {
+  position: relative;
+  top:50px;
+}
+
+.duck {
+  position: absolute;
+  bottom: 100%;       /* sits right above the box */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  transform: translate(-40%, 10px); /* center it, slight offset when hidden */
+  width: 40px;        /* adjust to taste */
+}
+
+.duck.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
 }
 
 .boxes span:hover {
@@ -79,7 +111,29 @@ footer {
   100% { box-shadow: 0 0 8px var(--ink); }
 }
 
-img {
-  width: 30px;
-  height:auto;
+.desc {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 15px;
+}
+
+.back{
+  margin: 20px;
+  size: 20px;
+}
+
+.back span {
+  border: 2px solid black;
+  padding: 5px 20px 5px 20px;
+  border-radius: 5px;
+  border-width: 3px;
+  display:inline-block;
+  background-color:antiquewhite;
+}
+
+.back span:hover {
+  animation-name: fade;
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
 }
